@@ -2,7 +2,7 @@
 
 # Confirm before running plugin updates
 echo "Are you sure you want to update plugins for all sites on this server? [y/N]"
-read -r -p  RESPONSE
+read RESPONSE
 
 	if [[ "$RESPONSE" =~ ^([yY][eE][sS]|[yY])$ ]]; then
 
