@@ -4,7 +4,7 @@
 echo "Are you sure you want to update plugins for all sites on this server? [y/N]"
 read RESPONSE
 
-	if [[ "$RESPONSE" =~ ^([yY][eE][sS]|[yY])$ ]]; then
+	if [[ "$RESPONSE" =~ ^([yY][eE][sS]|[yY]) ]]; then
 
 		BACKUPPATH=~/backups
 
