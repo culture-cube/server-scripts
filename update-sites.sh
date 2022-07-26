@@ -1,12 +1,14 @@
 #!/bin/bash
 
 # Confirm before running plugin updates
-echo "Are you sure you want to update plugins for all sites on this server? [y/N]"
-read RESPONSE
+read -r -p "Are you sure you want to update all specified directories? [y/N]" RESPONSE
 
 	if [[ "$RESPONSE" =~ ^([yY][eE][sS]|[yY]) ]]; then
 
 		BACKUPPATH=~/backups
+
+		cd
+		ROOT="$(pwd)"
 
 		# For each site, run updates and backups
 		for SITE in $(ls $ROOT); do
