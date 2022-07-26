@@ -27,8 +27,8 @@ read -r -p "Are you sure you want to update all specified directories? [y/N]" RE
 				rm $SITE.sql;
 
 				# Run updates
-				wp theme update --minor;
-				wp plugin update --minor;
+				wp theme update --all --minor;
+				wp plugin update --all --minor;
 				wp theme list;
 				wp plugin list;
 				wp core update;
