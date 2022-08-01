@@ -1,5 +1,5 @@
 #!/bin/bash
-DATE="$(date +'%d%m%Y')"
+DATE="$(date +'%Y%m%d')"
 BACKUPPATH=~/backups/$DATE
 
 mkdir -p $BACKUPPATH
