@@ -1,6 +1,6 @@
 #!/bin/bash
-
-BACKUPPATH=~/backups
+DATE="$(date +'%d%m%Y')"
+BACKUPPATH=~/backups/$DATE
 
 cd
 ROOT="$(pwd)"
