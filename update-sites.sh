@@ -2,6 +2,8 @@
 DATE="$(date +'%d%m%Y')"
 BACKUPPATH=~/backups/$DATE
 
+mkdir -p $BACKUPPATH
+
 cd
 ROOT="$(pwd)"
 
