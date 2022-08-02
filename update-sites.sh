@@ -7,6 +7,13 @@ mkdir -p $BACKUPPATH
 cd
 ROOT="$(pwd)"
 
+# First, delete backup folders older than a month
+echo "Deleting old backups..."
+DEL=$(date --date="30 days ago" +%Y%m%d)
+for i in `find $ROOT/backups -type d -name "2*"`; do
+  (($DEL > $(basename $i))) && echo "delete $i" || echo "dont delete $i"
+done
+
 # For each site, run updates and backups
 for SITE in $(ls $ROOT); do
 	if [ -d $ROOT/$SITE/public ]; then
