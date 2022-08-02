@@ -11,7 +11,7 @@ ROOT="$(pwd)"
 echo "Deleting old backups..."
 DEL=$(date --date="30 days ago" +%Y%m%d)
 for i in `find $ROOT/backups -type d -name "2*"`; do
-  (($DEL > $(basename $i))) && echo "delete $i" || echo "dont delete $i"
+  (($DEL > $(basename $i))) && rm -rf $i
 done
 
 # For each site, run updates and backups
